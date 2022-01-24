@@ -13,9 +13,9 @@ return Counter=0;
 return(
     <div>
         <p>{Counter}</p>
-        <button onClick={()=>{setCounter(UpCounter)}}>Add LIke</button>
-        <button onClick={()=>{setCounter(DownCounter)}}>Reduce Like</button>
-        <button onClick={()=>{setCounter(ReserCounter)}}>Reset Like</button>
+        <button className="btn" onClick={()=>{setCounter(UpCounter)}}>Add LIke</button>
+        <button className="btn" onClick={()=>{setCounter(DownCounter)}}>Reduce Like</button>
+        <button className="btn" onClick={()=>{setCounter(ReserCounter)}}>Reset Like</button>
     </div>
 )    
 }
