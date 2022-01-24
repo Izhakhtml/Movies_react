@@ -3,15 +3,16 @@ import { MoviesContext } from "./MyProvider.component";
 export const Movies =()=>{
 const ConsumerContext = useContext(MoviesContext)
 return(
-     <div>
-          {
-            ConsumerContext.map((item)=>(
-                <div>
-                    <h1>{item.movieName}</h1>
-                    <h1>{item.rating}</h1>         
-                </div>
-            ))
-          }
-     </div>
+<div id="head_div">
+    {
+        ConsumerContext.map((item)=>(
+         <article className="article_details">
+                <h2 style={{color:item.color,background:item.background,border:`15px solid ${item.color}`}}>Movie Name:{item.movieName}</h2>
+                <img src={item.link}/>
+                <h4 style={{color:item.color2,background:item.background,border:`5px solid ${item.color2}`,padding:"5px"}}>Rating:{item.rating}</h4>         
+         </article>
+        ))
+    }
+</div>
 )   
 }
